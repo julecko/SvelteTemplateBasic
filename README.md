@@ -1,38 +1,94 @@
-# sv
+# SvelteTemplate
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+A minimal **SvelteKit** template project using **Vite**, **SCSS**, **TypeScript**, **Prettier**, and **ESLint**.
 
-## Creating a project
+---
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Features
 
-```sh
-# create a new project in the current directory
-npx sv create
+* **SvelteKit**: Framework for building modern web apps.
+* **Vite**: Fast bundler & dev server.
+* **TypeScript**: Type safety for JS/TS code.
+* **SCSS**: Flexible styling with variables and mixins.
+* **Prettier**: Automatic code formatting.
+* **ESLint**: Code linting for best practices.
+* **Path aliases**: `$lib`, `@components`, `@styles`, `@utils` for clean imports.
 
-# create a new project in my-app
-npx sv create my-app
+---
+
+## Project Structure
+
+```
+src/
+ ├─ lib/
+ │   ├─ components/       # Reusable Svelte components
+ │   ├─ styles/           # Global SCSS, variables, mixins
+ │   ├─ utils/            # Helper functions
+ │   └─ assets/           # Images, icons, etc.
+ ├─ routes/               # SvelteKit pages and layouts
+ └─ app.html              # HTML template
 ```
 
-## Developing
+---
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Setup
 
-```sh
+1. Install dependencies:
+
+```bash
+npm install
+```
+
+2. Run dev server:
+
+```bash
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
+3. Build for production:
 
-To create a production version of your app:
-
-```sh
+```bash
 npm run build
 ```
 
-You can preview the production build with `npm run preview`.
+4. Preview production build:
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+```bash
+npm run preview
+```
+
+---
+
+## Path Aliases
+
+Configured in `svelte.config.js` and `tsconfig.json`:
+
+| Alias         | Path                 |
+| ------------- | -------------------- |
+| `$lib`        | `src/lib`            |
+| `@components` | `src/lib/components` |
+| `@styles`     | `src/lib/styles`     |
+| `@utils`      | `src/lib/utils`      |
+
+---
+
+## Code Quality
+
+* **Prettier**: Auto-formats code. Run with:
+
+```bash
+npx prettier --write .
+```
+
+* **ESLint**: Lints code. Run with:
+
+```bash
+npx eslint src --fix
+```
+
+---
+
+## TypeScript Config
+
+* Extends SvelteKit’s auto-generated TS config.
+* Path aliases defined for `$lib`, `@components`, `@styles`, `@utils`.
