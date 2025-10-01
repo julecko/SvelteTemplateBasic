@@ -10,11 +10,11 @@ const config = {
 	kit: {
         adapter: adapter(),
         alias: {
-        // Custom aliases
-        '@lib': path.resolve('./src/lib'),
-        '@components': path.resolve('./src/lib/components'),
-        '@styles': path.resolve('./src/lib/styles'),
-        '@utils': path.resolve('./src/lib/utils')
+            // Custom aliases
+            '@lib': path.resolve('./src/lib'),
+            '@components': path.resolve('./src/lib/components'),
+            '@styles': path.resolve('./src/lib/styles'),
+            '@utils': path.resolve('./src/lib/utils')
         }
     }
 };
